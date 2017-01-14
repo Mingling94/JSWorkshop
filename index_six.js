@@ -1,6 +1,11 @@
 // Import statements
 var request = require('request');
 
+// Pretty print json
+function printJson(parsed) {
+  console.log(JSON.stringify(parsed, null, 2));
+}
+
 function getRandomMoveFact(pokemon) {
   var randomMoveIndex = Math.floor(Math.random() * pokemon.moves.length);
   var randomMove = pokemon.moves[randomMoveIndex];
@@ -28,6 +33,19 @@ function getRandomPokemonFact(callback) {
 }
 
 // Act
+// Twilio Credentials
+var accountSid = 'AC36a8d507914596be67988bfaf82f91d9';
+var authToken = '5328a8d08057724b10c2a8b806ffab84';
+
+//require the Twilio module and create a REST client
+var client = require('twilio')(accountSid, authToken);
+
 getRandomPokemonFact(function(fact) {
-  console.log(fact);
+  client.messages.create({
+      to: '4344202952',
+      from: '15408742011',
+      body: fact,
+  }, function (err, message) {
+      console.log(message.sid);
+  });
 });
