@@ -3,6 +3,15 @@
     <title></title>
 </head>
 <body>
-    Hello world!
+    <p id="pID">Hello world!</p>
 </body>
+<script type="text/javascript">
+    function sleep() {
+        document.getElementById("pID").textContent = "Goodbye world!";
+        setTimeout(function() {
+            document.getElementById("pID").textContent = "Zzz...";
+        }, 2000);
+    }
+    setTimeout(sleep, 5000);
+</script>
 </html>
