@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Mingling94/PokeFacts/issues"
   },
-  "homepage": "https://github.com/Mingling94/PokeFacts#readme"
+  "homepage": "https://github.com/Mingling94/PokeFacts#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
