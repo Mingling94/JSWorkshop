@@ -1,0 +1,19 @@
+{
+  "name": "pokefacts",
+  "version": "1.0.0",
+  "description": "Pokemon facts, right to your phone, whether you like it or not :)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mingling94/PokeFacts.git"
+  },
+  "author": "Ming Luo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mingling94/PokeFacts/issues"
+  },
+  "homepage": "https://github.com/Mingling94/PokeFacts#readme"
+}
